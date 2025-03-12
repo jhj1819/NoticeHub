@@ -45,4 +45,10 @@ public class NoticeController {
         noticeService.deleteNotice(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping("/category/{category}")
+    public ResponseEntity<List<Notice>> getNoticesByCategory(@PathVariable String category) {
+        List<Notice> notices = noticeService.getNoticesByCategory(category);
+        return new ResponseEntity<>(notices, HttpStatus.OK);
+    }
 }

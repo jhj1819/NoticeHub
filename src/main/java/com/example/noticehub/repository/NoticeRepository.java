@@ -4,8 +4,10 @@ import com.example.noticehub.domain.Notice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface NoticeRepository extends JpaRepository<Notice, Long> {
-    // 필요에 따라 쿼리 메서드 추가 가능
-    // 예: List<Notice> findByCategory(String category);
+    // 카테고리별로 Notice를 조회
+    List<Notice> findByCategory(String category);
 }
