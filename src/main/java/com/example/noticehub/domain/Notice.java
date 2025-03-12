@@ -25,4 +25,12 @@ public class Notice {
     private String author; // 작성자
     private String postedDate; // 작성일
 
+    // 생성자, 게터/세터 등
+    public Notice(String title, String content, String category, String postedDate) {
+        this.title = title;
+        this.content = content;
+        this.category = category;
+        this.postedDate = postedDate;
+    }
+
 }
