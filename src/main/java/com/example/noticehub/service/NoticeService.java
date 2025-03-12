@@ -36,4 +36,9 @@ public class NoticeService {
     public void deleteNotice(Long id) {
         noticeRepository.deleteById(id);
     }
+
+    // 카테고리별 조회
+    public List<Notice> getNoticesByCategory(String category) {
+        return noticeRepository.findByCategory(category);
+    }
 }
